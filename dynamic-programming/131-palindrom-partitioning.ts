@@ -9,7 +9,7 @@
     for (let i = 0; i < s.length; i++) {
         const prefix = s.substring(0, i + 1);
         const suffix = s.substring(i + 1, s.length);
-        if (isPolindrom(prefix)) {
+        if (isPalindrom(prefix)) {
             if (suffix.length) {
                 const partitions = partition(suffix);
                 if (partitions) {
@@ -24,7 +24,7 @@
     return result;
 };
 
-function isPolindrom(s:string):boolean {
+function isPalindrom(s:string):boolean {
     for (let i = 0; i < s.length / 2; i++) {
         if (s[i] !== s[s.length - 1 - i]) return false;
     }
